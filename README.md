@@ -5,12 +5,14 @@ The Law of Causality, philosophically and mathematically proposed as follows:
 
 ---
 
-### Philosophical Statement
+## Philosophical Statement
 **Law: Causality**  
+
 "The states of a system are determined not solely by antecedent conditions but also by a time-symmetric or relational framework, where future states, external influences, or emergent patterns influence the present and past without strict causal precedence."
+
 ---
 
-### Mathematical Representation
+## Mathematical Representation
 1. **Time-Symmetric Dynamics**:  
    Redefine Newton's second law \( F = ma \) to include time-symmetric terms:  
 ```math
@@ -30,19 +32,20 @@ The Law of Causality, philosophically and mathematically proposed as follows:
    x(t) = \int_{t_0}^{t_f} G(t', t) F(t') \, dt'
 ``` 
    where $G(t', t)$ is a retrocausal kernel.
+   
 ---
 
-### Physical Interpretation
+## Physical Interpretation
 In systems governed by this law, events could:
 - Emerge without specific precursors (akin to stochastic phenomena).
 - Be influenced by conditions yet to manifest (retrocausality).
 - Exhibit holistic behaviors where causality is distributed across time and space.
 
-## Potential implications in classical or quantum systems.
+# Potential implications in classical or quantum systems.
 
-### Expansion on the Mathematical Derivation and Implications
+## Expansion on the Mathematical Derivation and Implications
 
-#### **Mathematical Derivation**
+### **Mathematical Derivation**
 
 1. **Time-Symmetric Dynamics**:
    The term $\alpha m \frac{d^2x}{d(-t)^2}$ reflects an "anti-causal" influence, which considers the retrograde temporal derivative. In practice, it models forces that depend symmetrically on forward and backward time:
@@ -67,7 +70,7 @@ In systems governed by this law, events could:
 
 ---
 
-#### **Implications in Classical Systems**
+### **Implications in Classical Systems**
 
 1. **Non-Deterministic Evolution**:
    Classical systems might not follow a strict trajectory. Instead, they exhibit probabilistic paths influenced by both past and future conditions.
@@ -77,7 +80,7 @@ In systems governed by this law, events could:
 
 ---
 
-#### **Quantum Analogy**
+### **Quantum Analogy**
 
 In quantum mechanics, causality could align with non-local phenomena and entanglement. A time-symmetric wavefunction might unify:
 ```math
@@ -87,11 +90,11 @@ indicating retrocausal interactions.
 
 ---
 
-## Exploration of physical examples / practical experiments to test such a framework.
+# Exploration of physical examples / practical experiments to test such a framework.
 
-### Testing the Law of Causality: Physical Examples and Experiments
+## Testing the Law of Causality: Physical Examples and Experiments
 
-#### **Physical Examples**
+### **Physical Examples**
 
 1. **Delayed Choice Quantum Eraser**:  
    This experiment already exhibits retrocausal-like behavior where choices made after photon emission appear to affect its prior state. Extending this, introducing a classical analog might explore macroscopic retrocausality.
@@ -101,7 +104,7 @@ indicating retrocausal interactions.
 
 ---
 
-#### **Proposed Experiments**
+### **Proposed Experiments**
 
 1. **Retrocausal Harmonic Oscillator**:  
    Modify a damped oscillator by introducing a retrograde term:
@@ -115,11 +118,11 @@ indicating retrocausal interactions.
 
 ---
 
-## Setting up specific experimental schematics.
+# Setting up specific experimental schematics.
 
-### Schematic for Retrocausal Experiments
+## Schematic for Retrocausal Experiments
 
-#### **1. Retrocausal Harmonic Oscillator Setup**
+### **1. Retrocausal Harmonic Oscillator Setup**
 **Objective:** Observe the influence of future-driven oscillations.
 
 - **Apparatus:**
