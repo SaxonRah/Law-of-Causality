@@ -27,11 +27,10 @@ The Law of Causality, philosophically and mathematically proposed as follows:
 ```
 
 3. **Retrocausality**:  
-   Allow effects from $t_f > t$ to influence $t$:  
+   Allow effects from $t_f > t$ to influence $t$, where $G(t', t)$ is a retrocausal kernel.
 ```math
    x(t) = \int_{t_0}^{t_f} G(t', t) F(t') \, dt'
 ``` 
-   where $G(t', t)$ is a retrocausal kernel.
    
 ---
 
@@ -55,18 +54,16 @@ In systems governed by this law, events could:
    Here, $\alpha$ is a tunable parameter that regulates how much the system respects anti-causal effects.
 
 2. **Emergent Influence Operator**:
-   The relational operator $R(x)$ accounts for global, time-independent influences across the system. For instance:
+   The relational operator $R(x)$ accounts for global, time-independent influences across the system. Where $\phi(x, t)$ is a potential field influenced by the state of the entire system.
 ```math
    R(x) = \nabla \cdot \phi(x, t)
 ```
-   where $\phi(x, t)$ is a potential field influenced by the state of the entire system.
 
 3. **Retrocausal Kernel**:
-   The retrocausal kernel $G(t', t)$ integrates effects over a time interval $[t_0, t_f]$, treating $t' > t$ contributions as valid inputs. Physically:
+   The retrocausal kernel $G(t', t)$ integrates effects over a time interval $[t_0, t_f]$, treating $t' > t$ contributions as valid inputs, where $\tau$ is a time-scale of retrocausal propagation.
 ```math
    G(t', t) = \exp\left(-\frac{|t' - t|}{\tau}\right)
 ```
-   where $\tau$ is a time-scale of retrocausal propagation.
 
 ---
 
@@ -82,11 +79,10 @@ In systems governed by this law, events could:
 
 ### **Quantum Analogy**
 
-In quantum mechanics, causality could align with non-local phenomena and entanglement. A time-symmetric wavefunction might unify:
+In quantum mechanics, causality could align with non-local phenomena and entanglement. A time-symmetric wavefunction might unify, indicating retrocausal interactions.
 ```math
   \psi(x, t) = \psi_{\text{forward}}(x, t) + \psi_{\text{backward}}(x, -t)
 ```
-indicating retrocausal interactions.
 
 ---
 
@@ -107,12 +103,11 @@ indicating retrocausal interactions.
 ### **Proposed Experiments**
 
 1. **Retrocausal Harmonic Oscillator**:  
-   Modify a damped oscillator by introducing a retrograde term:
+   Modify a damped oscillator by introducing a retrograde term and analyze resonances caused by future oscillations.
 ```math
    x(t) = A\cos(\omega t) + B\cos(\omega(-t))
 ```
-   and analyze resonances caused by future oscillations.
-
+   
 2. **Feedback in Coupled Systems**:  
    Design a feedback loop where the output signal depends on delayed and "advanced" inputs. For example, circuits with capacitors and variable delays can simulate retrocausal influences.
 
@@ -129,11 +124,10 @@ indicating retrocausal interactions.
   - A mass-spring system with damping $(m$, $k$, $c$).
   - Advanced feedback controller with delay and phase inverter.
 - **Method:**
-  - Attach a controller to add a retrocausal force:
+  - Attach a controller to add a retrocausal force, where $a(-t)$ is derived from delayed input.
 ```math
   F_\text{retro} = -\alpha m a(-t)
 ```
-  where $a(-t)$ is derived from delayed input.
   - Measure phase shifts and resonant behavior under varying delays.
 
 #### **2. Retrocausal Circuit Experiment**
