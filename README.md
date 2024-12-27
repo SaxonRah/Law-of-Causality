@@ -66,8 +66,103 @@ In systems governed by this law, events could:
 ```
 
 ---
+## Derivation for $\frac{d^2x}{d(-t)^2}$
 
-### **Implications in Classical Systems**
+### **1. Concept of the Retrograde Derivative**  
+The retrograde derivative is a mathematical construct that evaluates changes with respect to a reversed time parameter $-t$.
+
+Let $x(t)$ be a differentiable function of time $t$.
+
+### **2. First-Order Derivative**
+The first-order derivative with respect to $-t$ is given by:
+```math
+   \frac{dx}{d(-t)} = \frac{dx}{dt} \cdot \frac{dt}{d(-t)} = \frac{dx}{dt} \cdot (-1) = -\frac{dx}{dt}
+```
+
+### **3. Second-Order Derivative**
+The second-order derivative requires differentiating $\frac{dx}{d(-t)}$ again with respect to $-t$:
+```math
+   \frac{d^2x}{d(-t)^2} = \frac{d}{d(-t)} \left( -\frac{dx}{dt} \right)
+```
+Using the chain rule:
+```math
+   \frac{d^2x}{d(-t)^2} = -\frac{d}{dt} \left( \frac{dx}{dt} \right) \cdot \frac{dt}{d(-t)}
+```
+Since $\frac{dt}{d(-t)} = -1$, we have:
+```math
+   \frac{d^2x}{d(-t)^2} = -\frac{d^2x}{dt^2} \cdot (-1) = \frac{d^2x}{dt^2}
+```
+
+Thus, the retrograde second derivative is numerically equivalent to the forward-time second derivative, but its inclusion in the dynamics allows the interpretation of symmetry or retrocausal contributions.
+
+---
+
+## Derivation of the Retrocausal Kernel $G(t', t)$
+
+### **1. General Form of the Kernel**
+The retrocausal kernel $G(t', t)$ describes how future forces $F(t')$ influence the present state $x(t)$. It must decay with the time difference $|t' - t|$ and respect causality for $t' < t$.
+
+The kernel is modeled as follows where $\tau$ is the retrocausal time scale.
+```math
+   G(t', t) = \exp\left(-\frac{|t' - t|}{\tau}\right)
+```
+
+
+### **2. Key Properties**
+- **Decaying Influence**: The exponential factor ensures that future influences diminish as $|t' - t|$ grows.
+- **Symmetry**: By construction, $G(t', t) = G(t, t')$ when the absolute value is used, highlighting time-symmetric behavior.
+
+### **3. Normalization**
+To ensure proper integration, normalize $G(t', t)$ over the interval $[t_0, t_f]$:
+```math
+   G(t', t) = \frac{\exp\left(-\frac{|t' - t|}{\tau}\right)}{\int_{t_0}^{t_f} \exp\left(-\frac{|t' - t|}{\tau}\right) dt'}
+```
+
+### **4. Derivation of the Normalized Kernel**
+The denominator is the integral:
+```math
+   \int_{t_0}^{t_f} \exp\left(-\frac{|t' - t|}{\tau}\right) dt'
+```
+Split the integral at $t$):
+```math
+   \int_{t_0}^{t_f} \exp\left(-\frac{|t' - t|}{\tau}\right) dt' = \int_{t_0}^{t} \exp\left(-\frac{t - t'}{\tau}\right) dt' + \int_{t}^{t_f} \exp\left(-\frac{t' - t}{\tau}\right) dt'
+```
+For the first term:
+```math
+   \int_{t_0}^{t} \exp\left(-\frac{t - t'}{\tau}\right) dt' = \tau \left[1 - \exp\left(-\frac{t - t_0}{\tau}\right)\right]
+```
+For the second term:
+```math
+   \int_{t}^{t_f} \exp\left(-\frac{t' - t}{\tau}\right) dt' = \tau \left[1 - \exp\left(-\frac{t_f - t}{\tau}\right)\right]
+```
+Combining, the denominator becomes:
+```math
+   \int_{t_0}^{t_f} \exp\left(-\frac{|t' - t|}{\tau}\right) dt' = \tau \left[2 - \exp\left(-\frac{t - t_0}{\tau}\right) - \exp\left(-\frac{t_f - t}{\tau}\right)\right]
+```
+
+The normalized kernel is:
+```math
+   G(t', t) = \frac{\exp\left(-\frac{|t' - t|}{\tau}\right)}{\tau \left[2 - \exp\left(-\frac{t - t_0}{\tau}\right) - \exp\left(-\frac{t_f - t}{\tau}\right)\right]}
+```
+
+---
+
+## Application of $G(t', t)$ in the Retrocausal Framework
+
+The position $x(t)$ is influenced by the forces $F(t')$ over $[t_0, t_f]$:
+```math
+   x(t) = \int_{t_0}^{t_f} G(t', t) F(t') dt'.
+```
+Substituting the normalized kernel:
+```math
+   x(t) = \frac{1}{\tau \left[2 - \exp\left(-\frac{t - t_0}{\tau}\right) - \exp\left(-\frac{t_f - t}{\tau}\right)\right]} \int_{t_0}^{t_f} \exp\left(-\frac{|t' - t|}{\tau}\right) F(t') dt'
+```
+This describes how future and past forces combine to determine the present state, with the weight of influence controlled by $\tau$.
+
+
+---
+
+## **Implications in Classical Systems**
 
 1. **Non-Deterministic Evolution**:
    Classical systems might not follow a strict trajectory. Instead, they exhibit probabilistic paths influenced by both past and future conditions.
@@ -77,7 +172,7 @@ In systems governed by this law, events could:
 
 ---
 
-### **Quantum Analogy**
+## **Quantum Analogy**
 
 In quantum mechanics, causality could align with non-local phenomena and entanglement. A time-symmetric wavefunction might unify, indicating retrocausal interactions.
 ```math
